@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  openvpn-as:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-09-02T15:54:42.065951+03:00"
+    description: A Helm chart for OpenVPN Access Server
+    digest: e3e81d7eb6dcd1cd9b3cb79bc1256a3d8a97e94e2d3e00c33ffd498830d2e9c2
+    name: openvpn-as
+    type: application
+    urls:
+    - https://openvpn.github.io/as-helm-chart/openvpn-as-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-09-02T15:54:42.064394+03:00"
