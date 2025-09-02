@@ -1,4 +1,4 @@
-![openvpn-as](https://as-prod-public.s3.us-west-1.amazonaws.com/openvpn_logo.svg)
+![openvpn-as](https://as-prod-public.s3.us-west-1.amazonaws.com/openvpn_logo_big.svg)
 # OpenVPN Access Server Helm chart
 
 ## Introduction
@@ -14,8 +14,14 @@ This chart installs `openvpn/openvpn-as` Docker Hub image on a [Kubernetes](http
 
 To install the chart with the release name `my-vpn`:
 
+- Add repository
 ```console
-helm install my-vpn ./as-helm-chart
+helm repo add as-helm-chart https://openvpn.github.io/as-helm-chart
+```
+
+- Install chart
+```console
+helm install my-vpn as-helm-chart/openvpn-as --version 0.1.0
 ```
 
 These commands deploy openvpn-as on the Kubernetes cluster in the default configuration.
@@ -39,7 +45,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-helm install my-vpn -f values.yaml ./as-helm-chart
+helm install my-vpn as-helm-chart/openvpn-as -f values.yaml
 ```
 
 ## Access server custom configuration
@@ -95,3 +101,11 @@ To create and use TUN devices within Kubernetes pods, specific permissions are n
 Instead of using privileged mode [Device Plugins](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/device-plugins/) can be used.
 
 Kubernetes supports device plugins that can expose host devices to pods. For TUN devices, you can deploy a device plugin that allows access to /dev/net/tun. This can be done using a DaemonSet that runs on each node.
+
+## Contact support
+
+You can contact the support team for OpenVPN Access Server here:
+
+https://support.openvpn.com/hc/en-us/categories/360006075631-Access-Server
+
+### [EULA and legal information.](https://openvpn.net/legal/)
