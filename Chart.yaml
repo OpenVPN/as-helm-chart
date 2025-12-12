@@ -4,3 +4,9 @@ description: A Helm chart for OpenVPN Access Server
 type: application
 version: 0.1.2
 appVersion: latest
+home: https://openvpn.net/access-server/
+icon: https://as-prod-public.s3.us-west-1.amazonaws.com/openvpn_logo_big.svg
+sources:
+  - https://github.com/OpenVPN/as-helm-chart
+  - https://github.com/OpenVPN/as-docker
+  - https://hub.docker.com/r/openvpn/openvpn-as
