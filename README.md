@@ -21,7 +21,7 @@ helm repo add as-helm-chart https://openvpn.github.io/as-helm-chart
 
 - Install chart
 ```console
-helm install my-vpn as-helm-chart/openvpn-as --version 0.1.0
+helm install my-vpn as-helm-chart/openvpn-as
 ```
 
 These commands deploy openvpn-as on the Kubernetes cluster in the default configuration.
