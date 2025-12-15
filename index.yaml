@@ -3,7 +3,23 @@ entries:
   openvpn-as:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-09-02T20:04:27.424817+03:00"
+    created: "2025-12-15T16:55:14.216906+02:00"
+    description: A Helm chart for OpenVPN Access Server
+    digest: 29d8197256ca60eac5326c9d956f2ddc1efb1f29e47b92b86aa6ec50e2cc752d
+    home: https://openvpn.net/access-server/
+    icon: https://as-prod-public.s3.us-west-1.amazonaws.com/openvpn_logo_big.svg
+    name: openvpn-as
+    sources:
+    - https://github.com/OpenVPN/as-helm-chart
+    - https://github.com/OpenVPN/as-docker
+    - https://hub.docker.com/r/openvpn/openvpn-as
+    type: application
+    urls:
+    - https://openvpn.github.io/as-helm-chart/openvpn-as-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-12-15T16:55:14.21522+02:00"
     description: A Helm chart for OpenVPN Access Server
     digest: 348428e95ec8914e56e9d3b287a826e72d859ad4f2172396d10278bb694b2aeb
     name: openvpn-as
@@ -13,7 +29,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-09-02T20:04:27.423606+03:00"
+    created: "2025-12-15T16:55:14.214543+02:00"
     description: A Helm chart for OpenVPN Access Server
     digest: e3e81d7eb6dcd1cd9b3cb79bc1256a3d8a97e94e2d3e00c33ffd498830d2e9c2
     name: openvpn-as
@@ -21,4 +37,4 @@ entries:
     urls:
     - https://openvpn.github.io/as-helm-chart/openvpn-as-0.1.0.tgz
     version: 0.1.0
-generated: "2025-09-02T20:04:27.419738+03:00"
+generated: "2025-12-15T16:55:14.212581+02:00"
