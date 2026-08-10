@@ -2,7 +2,7 @@ apiVersion: v2
 name: openvpn-as
 description: A Helm chart for OpenVPN Access Server
 type: application
-version: 0.1.2
+version: 0.2.1
 appVersion: latest
 home: https://openvpn.net/access-server/
 icon: https://as-prod-public.s3.us-west-1.amazonaws.com/openvpn_logo_big.svg

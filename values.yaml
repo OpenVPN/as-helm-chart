@@ -5,8 +5,20 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
+# Deployment rollout strategy. Default is Recreate to preserve the chart's
+# original behavior. Set RollingUpdate (with maxUnavailable: 0) for graceful,
+# zero-all-down restarts when running multiple replicas (e.g. cluster mode).
+updateStrategy:
+  type: Recreate
+  # rollingUpdate:
+  #   maxUnavailable: 0
+  #   maxSurge: 1
+
 service:
   type: LoadBalancer
+  annotations: {}
+  externalTrafficPolicy: ""
+  loadBalancerIP: ""
   ports:
     admin: 943
     tcp: 443
@@ -37,6 +49,34 @@ securityContext:
     add:
       - NET_ADMIN
       - MKNOD
+
+# Environment variables for the Access Server container. Handy for feeding the
+# postStart script configuration/credentials without baking them into the script.
+env: []
+  # - name: CLUSTER_HOSTNAME
+  #   value: vpn.example.com
+envFrom: []
+  # - secretRef:
+  #     name: as-runtime-secrets
+
+initContainers: []
+  # - name: wait-for-ovpn
+  #   image: busybox:1.36
+  #   command: ["/bin/sh", "-c", "until grep -q '^ovpn ' /proc/modules; do sleep 3; done"]
+
+podAnnotations: {}
+podLabels: {}
+
+serviceAccountName: ""
+terminationGracePeriodSeconds:
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+lifecycle: {}
+  # preStop:
+  #   exec:
+  #     command: ["/bin/sh", "-c", "sleep 25"]
 
 postStart:
   enabled: false
