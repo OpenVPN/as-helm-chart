@@ -1,0 +1,25 @@
+# VCS
+.git/
+.gitignore
+.gitattributes
+.bzr/
+.bzrignore
+.hg/
+.hgignore
+.svn/
+
+# CI / repo tooling
+.github/
+.gitlab-ci.yml
+
+# Common backup and editor files
+*.swp
+*.bak
+*.tmp
+*.orig
+*~
+.DS_Store
+.project
+.idea/
+*.tmproj
+.vscode/

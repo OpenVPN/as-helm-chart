@@ -7,8 +7,9 @@ This chart installs `openvpn/openvpn-as` Docker Hub image on a [Kubernetes](http
 
 ## Prerequisites
 
-- Kubernetes 1.20+
-- Helm 3.0+
+- Kubernetes 1.26+ The default `service.type: LoadBalancer` exposes TCP and UDP ports on one Service, which Kubernetes supports only from 1.26.
+- Helm 3.11+ (the first Helm release that supports Kubernetes 1.26, per the [Helm version skew policy](https://helm.sh/docs/topics/version_skew/))
+- Kubernetes 1.31.3 and later need `securityContext.privileged: true`; see [TUN device in Kubernetes](#tun-device-in-kubernetes)
 
 ## Installing the Chart
 
